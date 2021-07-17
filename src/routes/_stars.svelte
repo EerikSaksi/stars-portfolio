@@ -1,6 +1,7 @@
 <script>
 	import IntersectionObserver from 'svelte-intersection-observer';
 	import Summary from './_summary.svelte';
+	import StatBuff from './_stat_buff.svelte';
 	import { onMount } from 'svelte';
 	let element;
 
@@ -71,9 +72,10 @@
 </script>
 
 <div class="relative">
-	<Summary />
-	<IntersectionObserver {element} on:observe={handleObserve} threshold = {0.5}>
-		<div bind:this={element} >
+    <Summary />
+    <StatBuff/>
+	<IntersectionObserver {element} on:observe={handleObserve} threshold={0.5}>
+		<div bind:this={element}>
 			<svelte:component
 				this={ParticlesComponent}
 				on:particlesLoaded={onParticlesLoaded}
