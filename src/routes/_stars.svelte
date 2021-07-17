@@ -66,22 +66,30 @@
 	};
 </script>
 
-<IntersectionObserver
-	{element}
-	on:observe={(e) => (e.detail.isIntersecting ? particlesContainer.play() : console.log('paused'))}
->
-	<div bind:this={element}>
-		<svelte:component
-			this={ParticlesComponent}
-			options={particlesConfig}
-			style="background: white"
-		/>
+<div class="relative">
+    <div class="absolute w-full h-1/2 flex justify-center items-center z-100">
+		<p>Eerik Saksi</p>
+        <p>Computing Science Student at University of Glasgow</p>
 	</div>
-</IntersectionObserver>
+	<IntersectionObserver
+		{element}
+		on:observe={(e) =>
+			e.detail.isIntersecting ? particlesContainer.play() : console.log('paused')}
+	>
+		<div bind:this={element}>
+			<svelte:component
+				this={ParticlesComponent}
+				options={particlesConfig}
+				style="background: white"
+			/>
+		</div>
+	</IntersectionObserver>
+</div>
 
 <style global>
 	#tsparticles {
 		background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(3, 37, 76, 1) 100%);
-		height: 150vh;
+		height: 200vh;
+        z-index: -1;
 	}
 </style>
