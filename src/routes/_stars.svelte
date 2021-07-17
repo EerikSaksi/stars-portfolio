@@ -1,5 +1,6 @@
 <script>
 	import IntersectionObserver from 'svelte-intersection-observer';
+    import Summary from './_summary.svelte'
 
 	import { onMount } from 'svelte';
 
@@ -67,10 +68,7 @@
 </script>
 
 <div class="relative">
-    <div class="absolute w-full h-1/2 flex justify-center items-center z-100">
-		<p>Eerik Saksi</p>
-        <p>Computing Science Student at University of Glasgow</p>
-	</div>
+    <Summary/>
 	<IntersectionObserver
 		{element}
 		on:observe={(e) =>
