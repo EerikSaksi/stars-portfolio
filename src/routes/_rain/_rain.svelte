@@ -2,7 +2,7 @@
 	import IntersectionObserver from 'svelte-intersection-observer';
 	import { onMount } from 'svelte';
 	let element;
-	import Pictures from './_pictures.svelte';
+    //background: linear-gradient(180deg, rgb(105,105,105,1) 0%, rgba(192,192,192,1) 100%);
 
 	let ParticlesComponent;
 	onMount(async () => {
@@ -13,10 +13,10 @@
 
 	let particlesConfig = {
 		detectRetina: true,
-		fpsLimit: 60,
+		fpsLimit: 30,
 		particles: {
 			color: {
-				value: '#ffffff'
+				value: '#000000'
 			},
 			lineLinked: {
 				blink: false,
@@ -26,16 +26,6 @@
 				enable: false,
 				opacity: 0,
 				width: 0
-			},
-			rotate: {
-				value: 0,
-				random: false,
-				direction: 'clockwise',
-				animation: {
-					enable: false,
-					speed: 5,
-					sync: false
-				}
 			},
 			move: {
 				attract: {
@@ -57,17 +47,7 @@
 					area: 800
 				},
 				limit: 0,
-				value: 200
-			},
-			opacity: {
-				animation: {
-					enable: false,
-					minimumValue: 0.1,
-					speed: 1,
-					sync: false
-				},
-				random: false,
-				value: 0.5
+				value: 100
 			},
 			shape: {
 				character: {
@@ -77,7 +57,6 @@
 					value: '*',
 					weight: '400'
 				},
-				image: [],
 				polygon: {
 					nb_sides: 5
 				},
@@ -108,8 +87,6 @@
 				radius: 10
 			},
 			scale: 1,
-			type: 'none',
-			url: ''
 		}
 	};
 
@@ -126,7 +103,6 @@
 </script>
 
 <div class="relative">
-	<Pictures />
 	<IntersectionObserver {element} on:observe={handleObserve} threshold={0.3}>
 		<div bind:this={element}>
 			<svelte:component
@@ -142,8 +118,7 @@
 
 <style global>
 	#rain {
-		background: linear-gradient(180deg, rgba(3, 37, 76, 1) 0%, rgba(3, 37, 76, 1) 100%);
-		height: 300vh;
+		height: 200vh;
 		z-index: -1;
 	}
 </style>

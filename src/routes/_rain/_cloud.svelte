@@ -1,11 +1,17 @@
-<div class="w-full overflow-x-hidden sky-to-rain">
-	<div class="flex flex-col h-full justify-between " style="width: 125vw;">
-		<img loading="lazy" alt="Cloud" src="clouds.png" style="transform: translateX(-5%)" />
+<div class="w-full sky-to-rain overflow-x-hidden" >
+	<div style="width: 150vw;">
+		<img
+			loading="lazy"
+			alt="Cloud"
+			src="clouds.png"
+			class="w-full z-100"
+			style="transform: translateX(-5%)"
+		/>
 	</div>
 </div>
 
 <style>
 	.sky-to-rain {
-		background: linear-gradient(180deg, rgba(3, 37, 76, 1) 50%, rgba(159,159,159, 1) 50%);
+		background: linear-gradient(180deg, rgba(3, 37, 76, 1) 50%, rgb(105, 105, 105, 1) 50%);
 	}
 </style>
