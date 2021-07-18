@@ -45,16 +45,14 @@
 	});
 </script>
 
-<div class="flex items-center" style = "height: 80vh " >
-	<div class="relative w-full overflow-x-hidden fade-in h-1/2">
-		{#each technologies as technology, i}
-			<Slide dist={distances[i]}>
-				{#if distances[i] <= ranges[0] && ranges[1] <= distances[i]}
-					<TechnologyGrid images={technology.images} extraClasses={technology.extraClasses} />
-				{/if}
-			</Slide>
-		{/each}
-	</div>
+<div class="relative w-full overflow-x-hidden fade-in h-1/2">
+	{#each technologies as technology, i}
+		<Slide dist={distances[i]}>
+			{#if distances[i] <= ranges[0] && ranges[1] <= distances[i]}
+				<TechnologyGrid images={technology.images} extraClasses={technology.extraClasses} />
+			{/if}
+		</Slide>
+	{/each}
 </div>
 
 <style>

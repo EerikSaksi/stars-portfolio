@@ -1,13 +1,21 @@
 <script>
-	import IntersectionObserver from 'svelte-intersection-observer';
 	import Summary from './_summary.svelte';
-	import CarouselWithTechnologies from '../_carousel/carousel_with_technologies.svelte';
-	import { onMount } from 'svelte';
+	import IntersectionObserver from 'svelte-intersection-observer';
+
+	let CarouselWithTechnologies;
 	let element;
+	let intersecting;
+	$: if (intersecting) {
+		console.log('import');
+		import('../_carousel/carousel_with_technologies.svelte').then((module) => {
+			CarouselWithTechnologies = module.default;
+		});
+	}
+	import { onMount } from 'svelte';
 
 	let ParticlesComponent;
-	onMount(async () => {
-		await import('svelte-particles').then((module) => {
+	onMount(() => {
+		import('svelte-particles').then((module) => {
 			ParticlesComponent = module.default;
 		});
 	});
@@ -58,16 +66,6 @@
 			}
 		}
 	};
-
-	let particlesContainer;
-	let onParticlesLoaded = (event) => {
-		particlesContainer = event.detail.particles;
-	};
-	function handleObserve(e) {
-		if (particlesContainer) {
-			e.detail.isIntersecting ? particlesContainer.play() : particlesContainer.pause();
-		}
-	}
 </script>
 
 <div
@@ -76,18 +74,13 @@
 >
 	<div class="absolute w-full">
 		<Summary />
-		<CarouselWithTechnologies />
+		<IntersectionObserver {element} bind:intersecting threshold={0.2} once={true}>
+			<div bind:this={element} class="flex items-center" style="height: 80vh">
+				<svelte:component this={CarouselWithTechnologies} />
+			</div>
+		</IntersectionObserver>
 	</div>
-	<IntersectionObserver {element} on:observe={handleObserve} threshold={0.2}>
-		<div bind:this={element}>
-			<svelte:component
-				this={ParticlesComponent}
-				on:particlesLoaded={onParticlesLoaded}
-				options={particlesConfig}
-				style="background: white"
-			/>
-		</div>
-	</IntersectionObserver>
+	<svelte:component this={ParticlesComponent} options={particlesConfig} />
 </div>
 
 <style global>
