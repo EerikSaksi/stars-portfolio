@@ -1,7 +1,7 @@
 <script>
 	import IntersectionObserver from 'svelte-intersection-observer';
 	import Summary from './_summary.svelte';
-	import StatBuff from '../_rain/_stat_buff.svelte';
+	import CarouselWithTechnologies from '../_carousel/carousel_with_technologies.svelte';
 	import { onMount } from 'svelte';
 	let element;
 
@@ -74,8 +74,10 @@
 	class="relative bg-black"
 	style="height: 180vh; linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(3, 37, 76, 1) 100%)"
 >
-	<Summary />
-	<StatBuff />
+	<div class="absolute w-full">
+		<Summary />
+		<CarouselWithTechnologies />
+	</div>
 	<IntersectionObserver {element} on:observe={handleObserve} threshold={0.2}>
 		<div bind:this={element}>
 			<svelte:component

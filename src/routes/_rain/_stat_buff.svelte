@@ -9,12 +9,12 @@
 	];
 </script>
 
-<div class="absolute w-full flex flex-col h-auto justify-center items-center bottom-0 bg-blue-500">
+<div class="absolute w-full flex flex-col justify-center items-center bottom-0 " style = "height: 80vh">
 	<div class="flex flex-col justify-center items-center p-8">
 		{#each technologies as row}
 			<div class="flex flex-row ">
 				{#each row as technology}
-					<div class="shadow-lg rounded-full m-2 p-3" style = "background-color: rgba(255,255,255,0.7);" >
+					<div class="shadow-lg rounded-full m-2 p-3" style = "" >
 						<img class="h-16" src={'techs/' + technology} alt="Technology" />
 					</div>
 				{/each}
