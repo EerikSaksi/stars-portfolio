@@ -102,10 +102,11 @@
 
 <style global>
 	#rain {
-		background-image: url('ground.png'), linear-gradient(180deg, rgb(105, 105, 105, 1) 0%, rgba(192, 192, 192, 1) 100%);
-        background-position: bottom;
-        background-repeat:no-repeat;
-        background-size: 100vw, auto;
+      background-image: url('/static/ground.png'),
+			linear-gradient(180deg, rgb(105, 105, 105, 1) 0%, rgba(192, 192, 192, 1) 100%);
+		background-position: bottom;
+		background-repeat: no-repeat;
+		background-size: 100vw, auto;
 		height: 200vh;
 		z-index: -1;
 	}
