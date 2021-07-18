@@ -5,7 +5,7 @@
 			alt="Cloud"
 			src="clouds.webp"
 			class="w-full z-100"
-			style="transform: translateX(-5%)"
+			style="transform: translateX(-6%)"
 		/>
 	</div>
 </div>

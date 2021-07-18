@@ -1,7 +1,7 @@
 <script>
 	import IntersectionObserver from 'svelte-intersection-observer';
 	import Summary from './_summary.svelte';
-	import StatBuff from './_stat_buff.svelte';
+	import StatBuff from '../_rain/_stat_buff.svelte';
 	import { onMount } from 'svelte';
 	let element;
 
@@ -31,7 +31,7 @@
 					area: 1080
 				},
 				limit: 0,
-				value: 100
+				value: 150
 			},
 			opacity: {
 				animation: {
@@ -70,9 +70,12 @@
 	}
 </script>
 
-<div class="relative bg-black" style = "height: 200vh">
-    <Summary />
-    <StatBuff/>
+<div
+	class="relative bg-black"
+	style="height: 180vh; linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(3, 37, 76, 1) 100%)"
+>
+	<Summary />
+	<StatBuff />
 	<IntersectionObserver {element} on:observe={handleObserve} threshold={0.2}>
 		<div bind:this={element}>
 			<svelte:component
@@ -88,7 +91,7 @@
 <style global>
 	#tsparticles {
 		background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(3, 37, 76, 1) 100%);
-		height: 200vh;
+		height: 180vh;
 		z-index: -1;
 	}
 </style>

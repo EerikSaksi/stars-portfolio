@@ -7,5 +7,4 @@
 <div class="relative">
 	<Stars />
 	<Cloud />
-	<Rain />
 </div>

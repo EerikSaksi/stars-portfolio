@@ -1,4 +1,4 @@
-<div class="absolute w-full h-1/2 flex justify-center items-center">
+<div class="absolute w-full flex justify-center items-center" style = "height: 100vh">
   <div class="flex flex-col justify-center items-center p-8 w-full md:w-2/5">
 		<p class="text-2xl md:text-5xl my-1 md:my-8">Education</p>
 		<div class="flex justify-between items-center w-full">
