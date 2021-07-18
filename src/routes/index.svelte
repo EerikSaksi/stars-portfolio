@@ -9,5 +9,4 @@
 	<Stars />
 	<Cloud />
 	<Rain />
-	<Pictures />
 </div>

@@ -2,7 +2,6 @@
 	import IntersectionObserver from 'svelte-intersection-observer';
 	import { onMount } from 'svelte';
 	let element;
-    //background: linear-gradient(180deg, rgb(105,105,105,1) 0%, rgba(192,192,192,1) 100%);
 
 	let ParticlesComponent;
 	onMount(async () => {
@@ -16,24 +15,9 @@
 		fpsLimit: 30,
 		particles: {
 			color: {
-				value: '#000000'
-			},
-			lineLinked: {
-				blink: false,
-				color: '#000',
-				consent: false,
-				distance: 150,
-				enable: false,
-				opacity: 0,
-				width: 0
+				value: ['#BD10E0', '#B8E986', '#50E3C2', '#FFD300', '#E86363']
 			},
 			move: {
-				attract: {
-					enable: false,
-					rotateX: 600,
-					rotateY: 1200
-				},
-				bounce: false,
 				direction: 'bottom',
 				enable: true,
 				outMode: 'out',
@@ -86,7 +70,7 @@
 			move: {
 				radius: 10
 			},
-			scale: 1,
+			scale: 1
 		}
 	};
 
@@ -118,6 +102,10 @@
 
 <style global>
 	#rain {
+		background-image: url('ground.png'), linear-gradient(180deg, rgb(105, 105, 105, 1) 0%, rgba(192, 192, 192, 1) 100%);
+        background-position: bottom;
+        background-repeat:no-repeat;
+        background-size: 100vw, auto;
 		height: 200vh;
 		z-index: -1;
 	}
