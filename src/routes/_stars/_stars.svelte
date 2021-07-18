@@ -74,7 +74,7 @@
 <div class="relative">
     <Summary />
     <StatBuff/>
-	<IntersectionObserver {element} on:observe={handleObserve} threshold={0.3}>
+	<IntersectionObserver {element} on:observe={handleObserve} threshold={0.2}>
 		<div bind:this={element}>
 			<svelte:component
 				this={ParticlesComponent}

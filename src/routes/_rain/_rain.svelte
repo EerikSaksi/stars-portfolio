@@ -1,9 +1,8 @@
 <script>
 	import IntersectionObserver from 'svelte-intersection-observer';
-	import Summary from './_summary.svelte';
-	import StatBuff from './_stat_buff.svelte';
 	import { onMount } from 'svelte';
 	let element;
+	import Pictures from './_pictures.svelte';
 
 	let ParticlesComponent;
 	onMount(async () => {
@@ -15,62 +14,6 @@
 	let particlesConfig = {
 		detectRetina: true,
 		fpsLimit: 60,
-		interactivity: {
-			detectsOn: 'canvas',
-			events: {
-				onClick: {
-					enable: false,
-					mode: 'repulse'
-				},
-				onDiv: {
-					elementId: 'repulse-div',
-					enable: false,
-					mode: 'repulse'
-				},
-				onHover: {
-					enable: false,
-					mode: 'repulse',
-					parallax: {
-						enable: false,
-						force: 60,
-						smooth: 10
-					}
-				},
-				resize: true
-			},
-			modes: {
-				bubble: {
-					distance: 400,
-					duration: 2,
-					opacity: 0.8,
-					size: 40,
-					speed: 3
-				},
-				connect: {
-					distance: 80,
-					lineLinked: {
-						opacity: 0.5
-					},
-					radius: 60
-				},
-				grab: {
-					distance: 400,
-					lineLinked: {
-						opacity: 1
-					}
-				},
-				push: {
-					quantity: 4
-				},
-				remove: {
-					quantity: 2
-				},
-				repulse: {
-					distance: 200,
-					duration: 0.4
-				}
-			}
-		},
 		particles: {
 			color: {
 				value: '#ffffff'
@@ -183,8 +126,7 @@
 </script>
 
 <div class="relative">
-	<Summary />
-	<StatBuff />
+	<Pictures />
 	<IntersectionObserver {element} on:observe={handleObserve} threshold={0.3}>
 		<div bind:this={element}>
 			<svelte:component
@@ -192,15 +134,16 @@
 				on:particlesLoaded={onParticlesLoaded}
 				options={particlesConfig}
 				style="background: white"
+				id="rain"
 			/>
 		</div>
 	</IntersectionObserver>
 </div>
 
 <style global>
-	#tsparticles {
-		background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(3, 37, 76, 1) 100%);
-		height: 200vh;
+	#rain {
+		background: linear-gradient(180deg, rgba(3, 37, 76, 1) 0%, rgba(3, 37, 76, 1) 100%);
+		height: 300vh;
 		z-index: -1;
 	}
 </style>
