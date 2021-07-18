@@ -86,7 +86,7 @@
 	}
 </script>
 
-<div class="relative">
+<div class="relative" style = "height: 200vh">
 	<IntersectionObserver {element} on:observe={handleObserve} threshold={0.3}>
 		<div bind:this={element}>
 			<svelte:component
@@ -102,7 +102,7 @@
 
 <style global>
 	#rain {
-      background-image: url('/static/ground.png'),
+		background-image: url('/static/ground.png'),
 			linear-gradient(180deg, rgb(105, 105, 105, 1) 0%, rgba(192, 192, 192, 1) 100%);
 		background-position: bottom;
 		background-repeat: no-repeat;

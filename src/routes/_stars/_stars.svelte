@@ -7,7 +7,7 @@
 
 	let ParticlesComponent;
 	onMount(async () => {
-		import('svelte-particles').then((module) => {
+		await import('svelte-particles').then((module) => {
 			ParticlesComponent = module.default;
 		});
 	});
@@ -71,7 +71,7 @@
 	}
 </script>
 
-<div class="relative">
+<div class="relative bg-black" style = "height: 200vh">
     <Summary />
     <StatBuff/>
 	<IntersectionObserver {element} on:observe={handleObserve} threshold={0.2}>

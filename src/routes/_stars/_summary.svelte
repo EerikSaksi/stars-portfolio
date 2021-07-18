@@ -17,7 +17,7 @@
 
 		<p class="text-2xl md:text-5xl my-1 md:my-8">Projects</p>
 		<div class="flex justify-between flex-row items-center w-full">
-			<img alt="Stat Buff" src="icon.png" class="w-24 md:32 rounded-full p-4" />
+			<img  alt="Stat Buff" src="icon.png" class="w-24 md:32 rounded-full p-4" />
 			<p class="text-xl md:text-3xl">Cross Platform Multiplayer App</p>
 		</div>
 	</div>
