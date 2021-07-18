@@ -102,7 +102,7 @@
 
 <style global>
 	#rain {
-		background-image: url('/static/ground.png'),
+		background-image: url('/static/ground.webp'),
 			linear-gradient(180deg, rgb(105, 105, 105, 1) 0%, rgba(192, 192, 192, 1) 100%);
 		background-position: bottom;
 		background-repeat: no-repeat;

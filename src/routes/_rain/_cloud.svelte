@@ -1,9 +1,9 @@
-<div class="w-full sky-to-rain overflow-x-hidden" >
-	<div style="width: 150vw;">
+<div class="w-full sky-to-rain overflow-x-hidden">
+	<div style="width: 125vw">
 		<img
 			loading="lazy"
 			alt="Cloud"
-			src="clouds.png"
+			src="clouds.webp"
 			class="w-full z-100"
 			style="transform: translateX(-5%)"
 		/>
