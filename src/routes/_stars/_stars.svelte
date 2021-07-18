@@ -65,7 +65,6 @@
 	};
 	function handleObserve(e) {
 		if (particlesContainer) {
-			console.log({ intersecting: e.detail.isIntersecting });
 			e.detail.isIntersecting ? particlesContainer.play() : particlesContainer.pause();
 		}
 	}

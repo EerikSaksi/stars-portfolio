@@ -1,14 +1,7 @@
 <script>
 	import IntersectionObserver from 'svelte-intersection-observer';
-	import { onMount } from 'svelte';
 	let element;
-
 	let ParticlesComponent;
-	onMount(async () => {
-		import('svelte-particles').then((module) => {
-			ParticlesComponent = module.default;
-		});
-	});
 
 	let particlesConfig = {
 		detectRetina: true,
@@ -78,27 +71,37 @@
 	let onParticlesLoaded = (event) => {
 		particlesContainer = event.detail.particles;
 	};
-	function handleObserve(e) {
-		if (particlesContainer) {
-			console.log({ intersecting: e.detail.isIntersecting });
-			e.detail.isIntersecting ? particlesContainer.play() : particlesContainer.pause();
+	async function handleObserve(e) {
+		if (e.detail.isIntersecting) {
+			if (!ParticlesComponent) {
+				console.log('imported');
+				await import('svelte-particles').then((module) => {
+					ParticlesComponent = module.default;
+				});
+			} else if (particlesContainer) {
+				console.log({ intersecting: e.detail.isIntersecting });
+				e.detail.isIntersecting ? particlesContainer.play() : particlesContainer.pause();
+			}
 		}
 	}
 </script>
 
-<div class="relative" style = "height: 200vh">
-	<IntersectionObserver {element} on:observe={handleObserve} threshold={0.3}>
-		<div bind:this={element}>
-			<svelte:component
-				this={ParticlesComponent}
-				on:particlesLoaded={onParticlesLoaded}
-				options={particlesConfig}
-				style="background: white"
-				id="rain"
-			/>
-		</div>
-	</IntersectionObserver>
-</div>
+<IntersectionObserver {element} on:observe={handleObserve} threshold={0}>
+	<div
+		class="relative"
+		style="height: 200vh; linear-gradient(180deg, rgb(105, 105, 105, 1) 0%, rgba(192, 192, 192, 1) 100%);
+"
+		bind:this={element}
+	>
+		<svelte:component
+			this={ParticlesComponent}
+			on:particlesLoaded={onParticlesLoaded}
+			options={particlesConfig}
+			style="background: white"
+			id="rain"
+		/>
+	</div>
+</IntersectionObserver>
 
 <style global>
 	#rain {
