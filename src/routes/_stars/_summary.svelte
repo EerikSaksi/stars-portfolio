@@ -1,33 +1,38 @@
-<div class="w-full flex justify-center items-center" style = "height: 100vh">
-  <div class="flex flex-col justify-center items-center p-8 w-full md:w-2/5">
-		<p class="text-2xl md:text-5xl my-1 md:my-8">Education</p>
-		<div class="flex justify-between items-center w-full">
-			<img alt="University of Glasgow" src="glasgow.webp" class="w-24 md:32" />
-			<p class="text-xl md:text-3xl">Computing MSci (ongoing)</p>
+<div class="w-full flex justify-center items-center" style="height: 100vh">
+	<div class="flex flex-col justify-center items-center p-8 w-full md:w-2/5">
+		<h1>Education</h1>
+		<div class="section-container">
+			<img alt="University of Glasgow" src="glasgow.webp" />
+			<p>Computing MSci (ongoing)</p>
 		</div>
-		<p class="text-2xl md:text-5xl my-1 md:my-8">Experience</p>
-		<div class="flex justify-between  items-center w-full">
-			<img alt="University of Glasgow" src="uros.webp" class="w-24 md:32" />
-			<p class="text-xl md:text-3xl">Software Engineer Intern</p>
+		<h1>Experience</h1>
+		<div class="section-container">
+			<img alt="University of Glasgow" src="uros.webp" />
+			<p>Software Engineer Intern</p>
 		</div>
-		<div class="flex justify-between flex-row items-center w-full">
-			<img alt="University of Glasgow" src="barclays.webp" class="w-24 md:32" />
-			<p class="text-xl md:text-3xl">Software Engineer Intern</p>
+		<div class="section-container">
+			<img alt="University of Glasgow" src="barclays.webp" />
+			<p>Software Engineer Intern</p>
 		</div>
-
-		<p class="text-2xl md:text-5xl my-1 md:my-8">Projects</p>
-		<div class="flex justify-between flex-row items-center w-full">
-			<img alt="Stat Buff" src="icon.webp" class="w-24 md:32 rounded-full p-4" />
-			<p class="text-xl md:text-3xl">Cross Platform Multiplayer App</p>
+		<h1>Projects</h1>
+		<div class="section-container">
+			<img alt="Stat Buff" src="icon.webp" class="rounded-full p-4" />
+			<p>Cross Platform Multiplayer App</p>
 		</div>
 	</div>
 </div>
 
-<style>
+<style lang="postcss">
+	h1 {
+		@apply text-3xl md:text-5xl my-1 md:my-8 text-white text-center;
+	}
 	p {
-		color: white;
+		@apply text-white text-base md:text-2xl text-right flex-grow;
 	}
 	img {
-		margin: 16px;
+		@apply w-24 md:w-32 mr-2;
+	}
+	.section-container {
+		@apply flex md:flex-col justify-between items-center w-full m-4 mt-0;
 	}
 </style>

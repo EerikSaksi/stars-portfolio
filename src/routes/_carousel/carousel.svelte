@@ -45,7 +45,7 @@
 	});
 </script>
 
-<div class="relative w-full overflow-x-hidden fade-in h-1/2">
+<div class="relative w-full overflow-x-hidden  h-1/2">
 	{#each technologies as technology, i}
 		<Slide dist={distances[i]}>
 			{#if distances[i] <= ranges[0] && ranges[1] <= distances[i]}
@@ -55,13 +55,3 @@
 	{/each}
 </div>
 
-<style>
-	@keyframes slideInFromLeft {
-		0% {
-			width: 0%;
-		}
-		100% {
-			width: 100%;
-		}
-	}
-</style>

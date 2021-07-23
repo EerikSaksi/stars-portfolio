@@ -6,7 +6,7 @@
 	let element;
 	let intersecting;
 	$: if (intersecting) {
-		console.log('import');
+        console.log("imported")
 		import('../_carousel/carousel_with_technologies.svelte').then((module) => {
 			CarouselWithTechnologies = module.default;
 		});
@@ -74,8 +74,8 @@
 >
 	<div class="absolute w-full">
 		<Summary />
-		<IntersectionObserver {element} bind:intersecting threshold={0.2} once={true}>
-			<div bind:this={element} class="flex items-center" style="height: 80vh">
+		<IntersectionObserver {element} bind:intersecting threshold={0.02} once={true}>
+			<div bind:this={element} class="flex items-center md:items-end" style="height: 80vh">
 				<svelte:component this={CarouselWithTechnologies} />
 			</div>
 		</IntersectionObserver>
