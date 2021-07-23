@@ -5,14 +5,14 @@
 			<img alt="University of Glasgow" src="glasgow.webp" />
 			<p>Computing MSci (ongoing)</p>
 		</div>
-		<h1>Experience</h1>
+		<h1 class="mb-2">Experience</h1>
 		<div class="section-container">
-			<img alt="University of Glasgow" src="uros.webp" />
+			<img alt="UROS" src="uros.webp" />
 			<p>Software Engineer Intern</p>
 		</div>
 		<div class="section-container">
-			<img alt="University of Glasgow" src="barclays.webp" />
-			<p>Software Engineer Intern</p>
+			<img alt="Barclays" src="barclays.webp" />
+			<p>Technology Developer Intern</p>
 		</div>
 		<h1>Projects</h1>
 		<div class="section-container">
@@ -24,7 +24,7 @@
 
 <style lang="postcss">
 	h1 {
-		@apply text-3xl md:text-4xl mb-2 md:my-8 text-white text-center border-b-2; 
+		@apply text-3xl md:text-4xl my-1 md:my-8 text-white text-center border-b-2; 
 	}
 	p {
 		@apply text-white text-base md:text-2xl text-right flex-grow ;
