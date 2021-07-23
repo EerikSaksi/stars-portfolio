@@ -24,15 +24,15 @@
 
 <style lang="postcss">
 	h1 {
-		@apply text-3xl md:text-5xl my-1 md:my-8 text-white text-center;
+		@apply text-3xl md:text-4xl my-1 md:my-8 text-white text-center border-b-2; 
 	}
 	p {
-		@apply text-white text-base md:text-2xl text-right flex-grow;
+		@apply text-white text-base md:text-2xl text-right flex-grow ;
 	}
 	img {
 		@apply w-24 md:w-32 mr-2;
 	}
 	.section-container {
-		@apply flex md:flex-col justify-between items-center w-full m-4 mt-0;
+		@apply flex justify-between items-center w-full m-4 mt-0;
 	}
 </style>
