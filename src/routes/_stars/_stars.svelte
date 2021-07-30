@@ -1,24 +1,30 @@
 <script>
 	import Summary from './_summary.svelte';
-	import CarouselWithTechnologies from '../_carousel/carousel_with_technologies.svelte';
+	let CarouselWithTechnologies;
 
 	import { onMount } from 'svelte';
 
 	let ParticlesComponent;
 	onMount(() => {
-		import('svelte-particles').then((module) => {
-			ParticlesComponent = module.default;
-		});
+		import('svelte-particles')
+			.then((module) => {
+				ParticlesComponent = module.default;
+			})
+			.then(() =>
+				import('../_carousel/carousel_with_technologies.svelte').then((module) => {
+					CarouselWithTechnologies = module.default;
+				})
+			);
 	});
 
-  /*
+	/*
   	Array.from(document.getElementsByTagName('img')).forEach((img) => {
   		if (img.naturalHeight < img.height || img.naturalWidth < img.width) {
             console.log(img.naturalHeight - img.clientHeight)
   		}
   	});
    */
-  
+
 	let particlesConfig = {
 		detectRetina: false,
 		fpsLimit: 30,
@@ -74,7 +80,7 @@
 	<div class="absolute w-full">
 		<Summary />
 		<div class="flex items-center md:items-end" style="height: 80vh">
-			<CarouselWithTechnologies />
+            <svelte:component this={CarouselWithTechnologies } />
 		</div>
 	</div>
 	<svelte:component this={ParticlesComponent} options={particlesConfig} />
