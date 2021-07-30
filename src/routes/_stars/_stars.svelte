@@ -1,16 +1,7 @@
 <script>
 	import Summary from './_summary.svelte';
-	import IntersectionObserver from 'svelte-intersection-observer';
+	import CarouselWithTechnologies from '../_carousel/carousel_with_technologies.svelte';
 
-	let CarouselWithTechnologies;
-	let element;
-	let intersecting;
-	$: if (intersecting) {
-        console.log("imported")
-		import('../_carousel/carousel_with_technologies.svelte').then((module) => {
-			CarouselWithTechnologies = module.default;
-		});
-	}
 	import { onMount } from 'svelte';
 
 	let ParticlesComponent;
@@ -20,6 +11,12 @@
 		});
 	});
 
+  //	Array.from(document.getElementsByTagName('img')).forEach((img) => {
+  //		if (img.naturalHeight < img.height || img.naturalWidth < img.width) {
+  //			console.log(img.src);
+  //		}
+  //	});
+  //
 	let particlesConfig = {
 		detectRetina: false,
 		fpsLimit: 30,
@@ -74,11 +71,9 @@
 >
 	<div class="absolute w-full">
 		<Summary />
-		<IntersectionObserver {element} bind:intersecting threshold={0.02} once={true}>
-			<div bind:this={element} class="flex items-center md:items-end" style="height: 80vh">
-				<svelte:component this={CarouselWithTechnologies} />
-			</div>
-		</IntersectionObserver>
+		<div class="flex items-center md:items-end" style="height: 80vh">
+			<CarouselWithTechnologies />
+		</div>
 	</div>
 	<svelte:component this={ParticlesComponent} options={particlesConfig} />
 </div>
