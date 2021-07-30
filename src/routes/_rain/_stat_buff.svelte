@@ -1,11 +1,11 @@
 <script>
 	let technologies = [
-		['react.webp', 'svelte.webp', 'django.webp',  'reactnative.webp', 'expo.webp'],
-		['materialui.webp', 'bootstrap.webp', 'tailwind.webp'],
-		['apollo.webp', 'typegraphql.webp', 'postgraphile.webp'],
-		['postgres.webp', 'sequelize.webp', 'typeorm.webp', 'sqlalchemy.webp'],
+		['react.svg', 'svelte.svg', 'django.svg',  'reactnative.svg', 'expo.svg'],
+		['materialui.svg', 'bootstrap.svg', 'tailwind.svg'],
+		['apollo.svg', 'typegraphql.svg', 'postgraphile.svg'],
+		['postgres.svg', 'sequelize.svg', 'typeorm.svg', 'sqlalchemy.svg'],
 
-		['pandas.webp', 'scikit.webp', 'spotlight.webp', 'networkx.png']
+		['pandas.svg', 'scikit.svg', 'spotlight.svg', 'networkx.svg']
 	];
 </script>
 
@@ -14,7 +14,7 @@
 		{#each technologies as row}
 			<div class="flex flex-row ">
 				{#each row as technology}
-					<div class="shadow-lg rounded-full m-2 p-3" style = "" >
+					<div class="shadow-lg rounded-full m-2 p-3" >
 						<img class="h-16" src={'techs/' + technology} alt="Technology" />
 					</div>
 				{/each}

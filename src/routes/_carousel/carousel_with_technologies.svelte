@@ -5,28 +5,28 @@
       extraClasses: "grid-cols-2 grid-rows-2",
       images: [
         {
-          src: "react.webp",
+          src: "react.svg",
         },
         {
-          src: "svelte.webp",
+          src: "svelte.svg",
         },
         {
-          src: "django.webp",
+          src: "django.svg",
         },
         {
-          src: "jquery.webp",
+          src: "jquery.svg",
         },
       ],
     },
     {
       extraClasses: "grid-cols-2 grid-rows-2",
       images: [
-        { src: "materialui.webp" },
+        { src: "materialui.svg" },
         {
-          src: "bootstrap.webp",
+          src: "bootstrap.svg",
         },
         {
-          src: "tailwind.webp",
+          src: "tailwind.svg",
           extraClasses: "col-span-full",
         },
       ],
@@ -35,10 +35,10 @@
       extraClasses: "grid-rows-1 grid-cols-2",
       images: [
         {
-          src: "reactnative.webp",
+          src: "reactnative.svg",
         },
         {
-          src: "expo.webp",
+          src: "expo.svg",
         },
       ],
     },
@@ -46,15 +46,15 @@
       extraClasses: "grid-rows-2 grid-cols-2",
       images: [
         {
-          src: "apollo.webp",
+          src: "apollo.svg",
         },
 
         {
-          src: "typegraphql.webp",
+          src: "typegraphql.svg",
         },
 
         {
-          src: "postgraphile.webp",
+          src: "postgraphile.svg",
           extraClasses: "col-span-full",
         },
       ],
@@ -63,16 +63,16 @@
       extraClasses: "grid-cols-2 grid-rows-2",
       images: [
         {
-          src: "postgres.webp",
+          src: "postgres.svg",
         },
         {
-          src: "sequelize.webp",
+          src: "sequelize.svg",
         },
         {
-          src: "typeorm.webp",
+          src: "typeorm.svg",
         },
         {
-          src: "sqlalchemy.webp",
+          src: "sqlalchemy.svg",
         },
       ],
     },
@@ -81,16 +81,16 @@
       extraClasses: "grid-cols-2 grid-rows-2",
       images: [
         {
-          src: "pandas.webp",
+          src: "pandas.svg",
         },
         {
-          src: "scikit.webp",
+          src: "scikit.svg",
         },
         {
-          src: "spotlight.webp",
+          src: "spotlight.svg",
         },
         {
-          src: "networkx.webp",
+          src: "networkx.svg",
         },
       ],
     },

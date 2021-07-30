@@ -3,7 +3,7 @@
 		<img
 			loading="lazy"
 			alt="Cloud"
-			src="clouds.webp"
+			src="clouds.svg"
 			class="w-full z-100"
 			style="transform: translateX(-6%)"
 		/>

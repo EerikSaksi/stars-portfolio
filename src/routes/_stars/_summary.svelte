@@ -2,21 +2,21 @@
 	<div class="flex flex-col justify-center items-center p-8 w-full md:w-2/5">
 		<h1>Education</h1>
 		<div class="section-container">
-			<img alt="University of Glasgow" src="glasgow.webp" />
+			<img alt="University of Glasgow" src="glasgow.svg" />
 			<p>Computing MSci (ongoing)</p>
 		</div>
 		<h1 class="mb-2">Experience</h1>
 		<div class="section-container">
-			<img alt="UROS" src="uros.webp" />
+			<img alt="UROS" src="uros.svg" />
 			<p>Software Engineer Intern</p>
 		</div>
 		<div class="section-container">
-			<img alt="Barclays" src="barclays.webp" />
+			<img alt="Barclays" src="barclays.svg" />
 			<p>Technology Developer Intern</p>
 		</div>
 		<h1>Projects</h1>
 		<div class="section-container">
-			<img alt="Stat Buff" src="icon.webp" class="rounded-full p-4" />
+			<img alt="Stat Buff" src="icon.svg" class="rounded-full p-4" />
 			<p>Cross Platform Multiplayer App</p>
 		</div>
 	</div>

@@ -11,12 +11,14 @@
 		});
 	});
 
-  //	Array.from(document.getElementsByTagName('img')).forEach((img) => {
-  //		if (img.naturalHeight < img.height || img.naturalWidth < img.width) {
-  //			console.log(img.src);
-  //		}
-  //	});
-  //
+  /*
+  	Array.from(document.getElementsByTagName('img')).forEach((img) => {
+  		if (img.naturalHeight < img.height || img.naturalWidth < img.width) {
+            console.log(img.naturalHeight - img.clientHeight)
+  		}
+  	});
+   */
+  
 	let particlesConfig = {
 		detectRetina: false,
 		fpsLimit: 30,
