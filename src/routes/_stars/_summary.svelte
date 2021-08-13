@@ -3,7 +3,7 @@
 </script>
 
 <div class="w-full flex justify-center items-center overflow-hidden relative" style="height: 100vh">
-    <Moon />
+	<Moon />
 	<div class="flex flex-col justify-center items-center p-8 w-full md:w-2/5">
 		<h1>Education</h1>
 		<div class="section-container">
