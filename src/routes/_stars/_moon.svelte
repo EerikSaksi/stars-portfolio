@@ -3,16 +3,16 @@
 	alt="Moon"
 >
 	<a href="https://www.linkedin.com/in/eerik-saksi-b58324193/">
-		<img src="linkedin.png" alt="Linkedin" />
+		<img src="linkedin.svg" alt="Linkedin" />
 	</a>
 	<a href="https://github.com/eeriksaksi">
-		<img src="github.png" alt="Github" />
+		<img src="github.svg" alt="Github" />
 	</a>
 	<a href="mailto:saksi.eerik@gmail.com">
-		<img src="gmail.png" alt="Github" />
+		<img src="gmail.svg" alt="Github" />
 	</a>
 	<a href="tel:+44751968702">
-		<img src="phone.png" alt="Github" />
+		<img src="phone.svg" alt="Github" />
 	</a>
 </div>
 
@@ -21,7 +21,7 @@
 		filter: brightness(1.2) drop-shadow(0 0 150px rgba(100, 100, 100, 1))
 			drop-shadow(0 0 30px rgba(100, 100, 100, 1));
 		animation: moon 12s infinite;
-		background-image: url(http://pngimg.com/uploads/moon/moon_PNG46.png);
+		background-image: url(moon.png);
 	}
 	@keyframes moon {
 		0% {
