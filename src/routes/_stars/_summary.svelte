@@ -1,4 +1,9 @@
-<div class="w-full flex justify-center items-center" style="height: 100vh">
+<script>
+	import Moon from './_moon.svelte';
+</script>
+
+<div class="w-full flex justify-center items-center overflow-hidden relative" style="height: 100vh">
+    <Moon />
 	<div class="flex flex-col justify-center items-center p-8 w-full md:w-2/5">
 		<h1>Education</h1>
 		<div class="section-container">
@@ -24,10 +29,10 @@
 
 <style lang="postcss">
 	h1 {
-		@apply text-3xl md:text-4xl my-1 md:my-8 text-white text-center border-b-2; 
+		@apply text-3xl md:text-4xl my-1 md:my-8 text-white text-center border-b-2;
 	}
 	p {
-		@apply text-white text-base md:text-2xl text-right flex-grow ;
+		@apply text-white text-base md:text-2xl text-right flex-grow;
 	}
 	img {
 		@apply w-24 md:w-32 mr-2;

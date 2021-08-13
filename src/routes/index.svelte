@@ -1,6 +1,6 @@
 <script>
 	import Stars from './_stars/_stars.svelte';
-	import Cloud from './_rain/_cloud.svelte';
+	import Cloud from './_cloud.svelte';
 </script>
 
 <div class="relative">
