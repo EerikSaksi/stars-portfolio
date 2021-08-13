@@ -13,7 +13,6 @@
 <div class="grid w-full h-full {extraClasses} divide-black">
   {#each images as ic}
     <img
-      loading="lazy"
       alt="Technology"
       src={ic.src}
       class="m-4 object-contain w-3/4 h-3/4  place-self-center {ic.extraClasses ? ic.extraClasses : ''}" />
