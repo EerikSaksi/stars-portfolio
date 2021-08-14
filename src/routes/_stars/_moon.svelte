@@ -6,10 +6,10 @@
 	<div class="relative">
 		<div class="grid grid-cols-2 place-items-center p-6 pt-12 pr-12 md:p-28 md:pl-8 md:pb-4">
 			<a href="https://www.linkedin.com/in/eerik-saksi-b58324193/">
-				<img class="filter-none" src="linkedin.svg" alt="Linkedin" />
+				<img src="linkedin.svg" alt="Linkedin" />
 			</a>
 			<a href="https://github.com/eeriksaksi">
-				<img class="filter-none" src="github.svg" alt="Github" />
+				<img  src="github.svg" alt="Github" />
 			</a>
 			<a href="mailto:saksi.eerik@gmail.com">
 				<img src="gmail.svg" alt="Github" />
@@ -25,6 +25,7 @@
 	.moon {
 		filter: brightness(1.2) drop-shadow(0 0 150px rgba(100, 100, 100, 1))
 			drop-shadow(0 0 30px rgba(100, 100, 100, 1));
+		animation: moon 12s infinite;
 	}
 	@keyframes moon {
 		0% {
@@ -44,8 +45,5 @@
 	img,
 	svg {
 		@apply w-10 md:w-24;
-	}
-	a > img {
-		filter: none;
 	}
 </style>
