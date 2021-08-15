@@ -25,7 +25,7 @@
 	.moon {
 		filter: brightness(1.2) drop-shadow(0 0 150px rgba(100, 100, 100, 1))
 			drop-shadow(0 0 30px rgba(100, 100, 100, 1));
-		animation: moon 12s infinite;
+		animation: moon 6s infinite;
 	}
 	@keyframes moon {
 		0% {
