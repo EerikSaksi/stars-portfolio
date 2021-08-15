@@ -2,7 +2,7 @@
 	class="w-40 md:w-96 h-40 md:h-96 top-0 right-0 absolute  -translate-y-1/3 translate-x-1/4"
 	alt="Moon"
 >
-	<img class="absolute min-w-full h-full moon" src="moon.png " alt="Moon" />
+	<img class="absolute min-w-full h-full moon" src="moon.jpg" alt="Moon" />
 	<div class="relative">
 		<div class="grid grid-cols-2 place-items-center p-6 pt-12 pr-12 md:p-28 md:pl-8 md:pb-4">
 			<a href="https://www.linkedin.com/in/eerik-saksi-b58324193/">
