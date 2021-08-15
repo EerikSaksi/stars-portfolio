@@ -44,6 +44,6 @@
 
 	img,
 	svg {
-		@apply w-10 md:w-24;
+		@apply w-10 md:w-24 opacity-80;
 	}
 </style>
