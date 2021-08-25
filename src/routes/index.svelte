@@ -66,25 +66,25 @@
 </script>
 
 <div
-	class="relative bg-black"
+	class="relative bg-black overflow-y-hidden"
 	style="height: 200vh; linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(3, 37, 76, 1) 100%)"
 >
-	<div class="absolute w-full">
-		<Summary />
-        <svelte:component this={Asteroids} />
-	</div>
 	<Cloud />
+	<div class="absolute w-full h-full md:h-2/3">
+		<Summary />
+		<svelte:component this={Asteroids} />
+	</div>
 	<svelte:component this={ParticlesComponent} options={particlesConfig} />
 </div>
 
 <style global>
 	#tsparticles {
 		background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgb(25, 25, 112) 100%);
-		height: 100%;
+		height: 200vh;
 		z-index: -1;
 	}
-    body {
-      margin: 0;
-      padding: 0;
-    }
+	body {
+		margin: 0;
+		padding: 0;
+	}
 </style>
