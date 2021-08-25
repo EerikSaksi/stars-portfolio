@@ -2,9 +2,11 @@
 	class="w-40 md:w-96 h-40 md:h-96 top-0 right-0 absolute  -translate-y-1/3 translate-x-1/4 flex justify-center items-center"
 	alt="Moon"
 >
-	<img class="absolute min-w-full h-full moon" src="moon.png" alt="Moon" />
+	<div class="absolute min-w-full h-full moon rounded-full" />
 	<div class="relative">
-		<div class="grid grid-cols-2 place-items-center mr-2 md:mr-6 mt-6 md:mt-20  md:mr-8 gap-2 md:gap-4">
+		<div
+			class="grid grid-cols-2 place-items-center mr-2 md:mr-6 mt-6 md:mt-20  md:mr-8 gap-2 md:gap-4"
+		>
 			<a href="https://www.linkedin.com/in/eerik-saksi-b58324193/">
 				<img src="linkedin.svg" alt="Linkedin" />
 			</a>
@@ -35,23 +37,11 @@
 
 <style lang="postcss">
 	.moon {
-		filter: brightness(1.2) drop-shadow(0 0 150px rgba(100, 100, 100, 1))
-			drop-shadow(0 0 30px rgba(100, 100, 100, 1));
-		animation: moon 6s infinite;
-	}
-	@keyframes moon {
-		0% {
-			filter: brightness(1.4) drop-shadow(0 0 150px rgba(100, 100, 100, 1))
-				drop-shadow(0 0 30px rgba(100, 100, 100, 1));
-		}
-		50% {
-			filter: brightness(1) drop-shadow(0 0 120px rgba(100, 100, 100, 1))
-				drop-shadow(0 0 10px rgba(100, 100, 100, 1));
-		}
-		100% {
-			filter: brightness(1.4) drop-shadow(0 0 150px rgba(100, 100, 100, 1))
-				drop-shadow(0 0 30px rgba(100, 100, 100, 1));
-		}
+		background-color: #ede7ce;
+		border: 2px solid #e6dfc3;
+		-webkit-box-shadow: 0px 0px 70px 4px rgba(230, 223, 195, 1);
+		-moz-box-shadow: 0px 0px 70px 4px rgba(230, 223, 195, 1);
+		box-shadow: 0px 0px 70px 4px rgba(230, 223, 195, 1);
 	}
 	img,
 	svg {

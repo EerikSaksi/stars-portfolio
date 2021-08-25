@@ -4,7 +4,11 @@ const config = {
 		"./src/**/*.{html,js,svelte,ts}",
 	],
 	theme: {
-		extend: {},
+		extend: {
+          height: {
+            'h-screen-1/2': '50vh'
+          }
+        },
 	},
 	plugins: [],
 };

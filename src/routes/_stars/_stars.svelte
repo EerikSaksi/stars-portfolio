@@ -1,5 +1,6 @@
 <script>
 	import Summary from './_summary.svelte';
+	import Cloud from '../_cloud.svelte';
 	let CarouselWithTechnologies;
 
 	import { onMount } from 'svelte';
@@ -16,7 +17,6 @@
 				})
 			);
 	});
-
 
 	let particlesConfig = {
 		detectRetina: false,
@@ -68,21 +68,19 @@
 
 <div
 	class="relative bg-black"
-	style="height: 180vh; linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(3, 37, 76, 1) 100%)"
+	style="height: 200vh; linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(3, 37, 76, 1) 100%)"
 >
 	<div class="absolute w-full">
 		<Summary />
-		<div class="flex items-center md:items-end" style="height: 80vh">
-            <svelte:component this={CarouselWithTechnologies } />
-		</div>
 	</div>
+	<Cloud />
 	<svelte:component this={ParticlesComponent} options={particlesConfig} />
 </div>
 
 <style global>
 	#tsparticles {
-		background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(3, 37, 76, 1) 100%);
-		height: 180vh;
+		background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgb(25, 25, 112) 100%);
+		height: 100%;
 		z-index: -1;
 	}
 </style>
