@@ -1,7 +1,7 @@
 <script>
-    import Summary from './_summary.svelte';
-    import Cloud from './_space_stuff/_cloud.svelte';
-    let Asteroids; 
+	import Summary from './_summary.svelte';
+	import Cloud from './_space_stuff/_cloud.svelte';
+	let Asteroids;
 
 	import { onMount } from 'svelte';
 
@@ -11,11 +11,10 @@
 			.then((module) => {
 				ParticlesComponent = module.default;
 			})
-            .then(() => import('./_space_stuff/_asteroids/asteroid.svelte'))
+			.then(() => import('./_space_stuff/_asteroids/asteroids.svelte'))
 			.then((module) => {
 				Asteroids = module.default;
-			})
-          
+			});
 	});
 
 	let particlesConfig = {
@@ -84,4 +83,8 @@
 		height: 100%;
 		z-index: -1;
 	}
+    body {
+      margin: 0;
+      padding: 0;
+    }
 </style>

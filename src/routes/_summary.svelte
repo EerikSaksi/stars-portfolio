@@ -2,7 +2,7 @@
   import Moon from './_space_stuff/_moon.svelte';
 </script>
 
-<div class="w-full flex justify-center items-center overflow-hidden relative ">
+<div class="flex justify-center items-center overflow-hidden relative ">
 	<Moon />
 	<div class="flex flex-col justify-center items-center p-8 h-full w-full md:w-2/5 mt-16">
 		<div class="section-container">

@@ -1,8 +1,7 @@
 <div
 	class="w-40 md:w-96 h-40 md:h-96 top-0 right-0 absolute  -translate-y-1/3 translate-x-1/4 flex justify-center items-center"
-	alt="Moon"
 >
-	<div class="absolute min-w-full h-full moon rounded-full" />
+	<div class="absolute min-w-full h-full moon rounded-full"/>
 	<div class="relative">
 		<div
 			class="grid grid-cols-2 place-items-center mr-2 md:mr-6 mt-6 md:mt-20  md:mr-8 gap-2 md:gap-4"

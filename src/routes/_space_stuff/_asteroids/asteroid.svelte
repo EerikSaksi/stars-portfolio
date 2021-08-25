@@ -1,5 +1,9 @@
-<div class="asteroid h-32 w-32 flex justify-center items-center p-4 absolute">
-  <img src="apollo.svg" alt="Apollo">
+<script>
+  export let image;
+  export let topOffset;
+</script>
+<div class="asteroid h-32 w-32 flex justify-center items-center p-4 absolute" style = "transform: translateY({topOffset}px)">
+  <img src={image} alt={image}>
 </div>
 
 <style>
@@ -10,7 +14,6 @@
     animation-duration: 2s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
-    left: -500px
   }
   @keyframes left-to-right {
     from {
@@ -20,6 +23,5 @@
       left: 100%
     }
   }
-
 
 </style>
