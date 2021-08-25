@@ -22,6 +22,6 @@
 	];
 </script>
 
-<div class="relative ">
-  <Asteroid image = {images[0]} topOffset = {0}/>
+<div class="relative w-full overflow-x-hidden h-32">
+	<Asteroid image={images[0]} topOffset={0} />
 </div>
