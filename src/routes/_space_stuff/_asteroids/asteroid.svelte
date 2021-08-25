@@ -13,7 +13,7 @@
 
 <style>
 	div {
-		background-image: url('asteroid.png');
+        background-image: url('/static/asteroid.png');
 		animation-name: left-to-right;
 		animation-timing-function: linear;
 		animation-iteration-count: infinite;
