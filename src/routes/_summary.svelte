@@ -7,7 +7,7 @@
 	<div class="flex flex-col justify-center items-center p-8 h-full w-full md:w-2/5 mt-16">
 		<div class="section-container">
 			<img alt="University of Glasgow" src="glasgow.svg" />
-			<p>Computing MSci (ongoing)</p>
+			<p>Computing MSci (First Class Honours)</p>
 		</div>
 		<div class="section-container">
 			<img alt="UROS" src="uros.svg" />

@@ -1,10 +1,8 @@
 <script>
 	import Asteroid from './asteroid.svelte';
 	let imageRows = [
-		[{ src: 'apollo.svg' }, { src: 'bootstrap.svg' }, { src: 'django.svg' }, { src: 'expo.svg' }],
+		[{ src: 'django.svg' },{ src: 'graphql.svg', classes: 'p-2 md:p-3' }, { src: 'ts.svg', classes: 'p-2 md:p-3' }, { src: 'spark.svg' } ],
 		[
-			{ src: 'materialui.svg', classes: 'p-2 md:p-4' },
-			{ src: 'networkx.svg', classes: 'p-2 md:p-3' },
 			{ src: 'pandas.svg' },
 			{ src: 'postgraphile.svg' },
 			{ src: 'rust.svg' }
@@ -23,7 +21,7 @@
 			{ src: 'tailwind.svg' }
 		]
 	];
-	let delays = [2, 5, 3, 1, 4];
+	let delays = [5, 2, 3, 1, 3];
 </script>
 
 ],
